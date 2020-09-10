@@ -101,7 +101,8 @@ func (s *SmartContract) consultarPessoa(APIstub shim.ChaincodeStubInterface, arg
 
 	fmt.Printf("- consultarPessoa:\n%s\n", buffer.String())
 
-	return shim.Success(buffer.Bytes())
+	//return shim.Success(buffer.Bytes())
+	return shim.Success(pessoaSerializado)
 }
 
 func (s *SmartContract) criarBoleto(APIstub shim.ChaincodeStubInterface, args []string) sc.Response {
